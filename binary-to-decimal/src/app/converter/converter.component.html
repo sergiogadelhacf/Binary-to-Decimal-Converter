@@ -1,38 +1,33 @@
-<div class="container">
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
-            <h1>
-                Binary to Decimal
-            </h1>
-            <h2>
-                Converter
-            </h2>
+<div class="text-center">
+    <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <div class="mb-auto">
+                <h1>
+                    Binary to Decimal
+                </h1>
+                <h2 class="text-muted">
+                    Converter
+                </h2>
         </div>
-        <div class="col-2"></div>
-    </div>
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-3">
-            <p>Binary Value:</p>
-            <input type="text" #binary [value]="binaryValue">
+        <div class="mb-auto">
+            <div>
+                <span>
+                    <input type="text" placeholder="Binary Value" #binary >
+                </span>
+                <span>
+                    <svg class="bi bi-arrow-right inline" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.146 4.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 8l-2.647-2.646a.5.5 0 010-.708z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd" d="M2 8a.5.5 0 01.5-.5H13a.5.5 0 010 1H2.5A.5.5 0 012 8z" clip-rule="evenodd"/>
+                    </svg>
+                </span>
+                <span>
+                    <input type="text" placeholder="Decimal Value" [value]="decimalValue? decimalValue : ''"  readonly>
+                </span>
+            </div>
         </div>
-        <div class="col-2">
-            <img src="../../assets/interface.svg" width="auto" height="80px">
-        </div>
-        <div class="col-3">
-            <p>Decimal Value:</p>
-            <input type="text" [value]="decimalValue">
-        </div>
-        <div class="col-2"></div>
-    </div>
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
-            <button (click)="convertToDecimal(binary.value)">
+        <div>
+            <button class="btn btn-lg btn-secondary" (click)="convertToDecimal(binary.value)">
                 Convert
             </button>
         </div>
-        <div class="col-4"></div>
     </div>
 </div>

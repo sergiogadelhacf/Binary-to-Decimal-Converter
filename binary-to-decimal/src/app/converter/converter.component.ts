@@ -7,8 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ConverterComponent implements OnInit {
 
-  binaryValue: number = 0;
-  decimalValue: number = 0;
+  binaryValue: number;
+  decimalValue: number;
 
   constructor() { }
 
